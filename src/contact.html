@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-orange-50 min-h-screen flex items-center justify-center">
+
+  <!-- ======= BOUTON POUR OUVRIR LE FORMULAIRE ======= -->
+  <button id="open-contact"
+          class="bg-orange-600 text-white px-6 py-3 rounded-xl uppercase font-bold hover:bg-orange-700 transition">
+    Ouvrir le formulaire
+  </button>
+
+
+  <!-- ======= POPUP DU FORMULAIRE ======= -->
+  <div id="contact-popup"
+       class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+
+    <div class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl w-full max-w-lg p-8 relative">
+
+      <!-- Bouton de fermeture -->
+      <button id="close-contact"
+              class="absolute top-4 right-4 text-gray-600 hover:text-red-600 text-2xl font-bold">
+        
+      </button>
+
+      <h2 class="text-3xl font-bold text-orange-600 mb-6 uppercase">
+        Passer une Commande
+      </h2>
+
+      <form class="space-y-4">
+
+        <div>
+          <label class="block font-semibold text-gray-700">Nom complet</label>
+          <input type="text"
+                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
+                 placeholder="Votre nom complet">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-gray-700">Numéro de téléphone</label>
+          <input type="text"
+                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
+                 placeholder="+237 ...">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-gray-700">Adresse de livraison</label>
+          <input type="text"
+                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
+                 placeholder="Quartier, rue, description...">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-gray-700">Votre commande</label>
+          <textarea rows="3"
+                    class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Ex: 2 burgers + 1 Coca ..."></textarea>
+        </div>
+
+        <button class="bg-orange-600 text-white w-full py-3 rounded-xl uppercase font-bold hover:bg-orange-700 transition">
+          Envoyer la commande
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ======= SCRIPT POPUP ======= -->
+  <script>
+    const openBtn = document.getElementById("open-contact");
+    const closeBtn = document.getElementById("close-contact");
+    const popup = document.getElementById("contact-popup");
+
+    // Ouvrir le formulaire
+    openBtn.addEventListener("click", () => {
+      popup.classList.remove("hidden");
+    });
+
+    // Fermer le formulaire
+    closeBtn.addEventListener("click", () => {
+      popup.classList.add("hidden");
+    });
+
+    // Fermer en cliquant en dehors du formulaire
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) popup.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>

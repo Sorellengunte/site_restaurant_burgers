@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Burger Restaurant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-4">
+        <img src="img/9432232-removebg-preview.png" alt="Logo" class="w-20">
+      
+      </div>
+
+      <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
+        <a href="index.html" class="text-gray-800 hover:text-red-500 font-semibold">Accueil</a>
+        <a href="apropos.html" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
+        <a href="menu.html" class="hover:text-red-500 text-red-600">Menu</a>
+        <a href="contact.html" class="hover:text-red-500">Contact</a>
+      </div>
+<div class="hidden md:flex md:items-center space-x-4">
+            <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
+            <span class="text-gray-800 font-semibold"> +237 699 71 84 52</span>
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+        </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-md">
+      <a href="index.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Accueil</a>
+      <a href="apropos.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">À propos</a>
+      <a href="menu.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Menu</a>
+      <a href="contact.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Contact</a>
+      <span class="block px-4 py-2 font-semibold">+237 699 71 84 52</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+ <section class="pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-10 items-center">
+<div>
+<h1 class="text-4xl md:text-5xl font-bold mb-6 ">À propos de <span class="text-red-600 ">S-Burger</span></h1>
+<p class="text-black-700 leading-relaxed mb-6">
+Depuis plus de 5 ans, S-Burger propose les meilleurs burgers artisanaux de la ville.
+Nous utilisons uniquement des ingrédients frais : de la viande 100% bovine, des légumes bio,
+et des sauces faites maison.
+</p>
+<p class="text-black-700 leading-relaxed mb-6">
+Notre objectif est simple : offrir une expérience culinaire unique, un service rapide,
+et un goût inoubliable qui vous donne envie de revenir.
+</p>
+<a href="menu.html" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg  hover:bg-red-800">Découvrir notre menu</a>
+</div>
+<div>
+<img src="img/delicious-meat-burger-wooden-board-removebg-preview.png" alt="burger artisanal" class="w-50" />
+</div>
+</div>
+</section>
+
+
+<!-- Valeurs -->
+<section class="bg-white py-16">
+<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+<div class="p-6 bg-gray-50 rounded-xl shadow text-center">
+<h3 class="text-xl font-bold mb-2">Qualité</h3>
+<p class="text-gray-600">Ingrédients sélectionnés pour un goût exceptionnel.</p>
+</div>
+<div class="p-6 bg-gray-50 rounded-xl shadow text-center">
+<h3 class="text-xl font-bold mb-2">Rapidité</h3>
+<p class="text-gray-600">Un service rapide sans compromettre la qualité.</p>
+</div>
+<div class="p-6 bg-gray-50 rounded-xl shadow text-center">
+<h3 class="text-xl font-bold mb-2">Passion</h3>
+<p class="text-gray-600">Chaque burger est préparé avec amour et expertise.</p>
+</div>
+</div>
+</section>
+
+  
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

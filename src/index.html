@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="input.css">
 </head>
 <body class="bg-gray-100">
     
   <!-- Navbar -->
   <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
-          <img class="h-18 w-auto" src="img/9432232-removebg-preview.png" alt="Logo">
+          <img class="w-20" src="img/9432232-removebg-preview.png" alt="Logo">
         </div>
 
         <!-- Menu Desktop -->
         <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
-          <a href="#" class="text-gray-800 hover:text-red-500 font-semibold">Accueil</a>
-          <a href="#" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
-          <a href="#" class="text-gray-800 hover:text-red-500 font-semibold">Menu</a>
-          <a href="#" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
+          <a href="#" class="hover:text-red-500 text-red-600">Accueil</a>
+          <a href="apropos.html" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
+          <a href="menu.html" class="text-gray-800 hover:text-red-500 font-semibold">Menu</a>
+          <a a href="contact" id="contact-link" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
           </div>
         <div class="hidden md:flex md:items-center space-x-4">
             <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
@@ -45,9 +46,9 @@
     <div id="mobile-menu" class="hidden md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <a href="#" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Accueil</a>
-        <a href="#" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">À propos</a>
-        <a href="#" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
-        <a href="#" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
+        <a href="apropos.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">À propos</a>
+        <a href="menu.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
+        <aa href="contact.html" id="contact-link" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
         <span class="block text-gray-800 font-semibold px-3 py-2"> +237 699 17 84 52</span>
         <button class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
       </div>
@@ -56,31 +57,29 @@
 
 
 <!-- Hero Section -->
+ 
 <section class="bg-gray-100 relative overflow-hidden">
-  <!-- Images de fond décoratives -->
+  <!-- petite Images  décoratives -->
 
   <img src="img/prepared-unhealthy-pile-delicious-food-removebg-preview.png" alt="Décor bas gauche" class="absolute bottom-0 left-0  opacity-70 left-90 w-50 h-32">
-  <img src="img/prepared-unhealthy-pile-delicious-food-removebg-preview.png" alt="Décor bas droite" class="absolute bottom-0 right-0 w-20 opacity-70 z-0  w-50 h-32">
+  <img src="img/prepared-unhealthy-pile-delicious-food-removebg-preview.png" alt="Décor bas droite" class="absolute bottom-0 right-0  opacity-70  w-50 h-32">
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center py-20 gap-10 relative z-10">
-    <!-- Partie gauche : texte -->
-    <div class="md:w-1/2 space-y-3 md:space-y-5 mt-20">
+    <!-- Partie gauche les texte -->
+    <div class="md:w-1/2 space-y-3 md:space-y-5  mt-15">
       <p class="text-xl md:text-2xl font-medium text-black tracking-wide">Best in Town</p>
       <h1 class="text-5xl md:text-6xl font-extrabold text-black leading-tight uppercase font-bold">Enjoy Our</h1>
       <h2 class="text-5xl md:text-6xl font-extrabold text-red-600 leading-tight uppercase font-bold">Chicken Burger</h2>
       <p class="text-5xl md:text-6xl font-extrabold text-black leading-tight uppercase font-bold">Fast Food</p>
       <p class="text-xl md:text-2xl font-medium text-black tracking-wide">Bacon-patatoes-BBQ sauce</p>
-      <button class="mt-6 bg-red-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-red-600 transition duration-300 shadow-lg">Track Order</button>
+      <button class="btn-primary">Track Order</button>
     </div>
 
     <!-- Partie droite  -->
     <div class="md:w-2/4 relative flex justify-center">
       <div class="relative">
-        <!-- Image principale -->
         <img src="img/freepik__background__67339.png" alt="Burger" class="rounded-xl md:w-full z-10">
-        <!-- Deuxième image plus petite à gauche -->
         <img src="img/freepik__background__67339.png" alt="Burger 2" class="rounded-xl w-24 absolute bottom-2 left-2 transform -translate-x-4 translate-y-6 z-20 md:w-2/4">
-        <!-- Troisième image au-dessus à gauche -->
         <img src="img/SL-082420-34450-39-removebg-preview.png" alt="Burger 3" class="rounded-xl w-20 absolute top-0 left-25 transform -translate-x-4 -translate-y-4 z-30 md:w-1/4">
       </div>
     </div>
@@ -97,5 +96,7 @@
       menu.classList.toggle('hidden');
     });
   </script>
+
+  
 </body>
 </html>
