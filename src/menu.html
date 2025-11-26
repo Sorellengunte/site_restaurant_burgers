@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - Burger Restaurant</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Menu</title>
+  <link rel="stylesheet" href="output.css">
+
 </head>
 <body class="bg-gray-100">
 
@@ -67,7 +68,7 @@
           <p class="text-gray-600 mb-3">Boeuf, cheddar, salade, tomate et sauce spéciale.</p>
           <div class="flex justify-between items-center">
             <span class="font-bold text-orange-600">1000 fcfa</span>
-            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button>
+           <a href="contact.html"> <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button></a>
           </div>
         </div>
       </div>
@@ -80,7 +81,7 @@
           <p class="text-gray-600 mb-3">Boeuf, double cheddar, cornichons et sauce BBQ.</p>
           <div class="flex justify-between items-center">
             <span class="font-bold text-orange-600">1500 fcfa</span>
-            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button>
+           <a href="contact.html"> <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button></a>
           </div>
         </div>
       </div>
@@ -93,7 +94,7 @@
           <p class="text-gray-600 mb-3">Poulet grillé, salade, tomate et sauce mayo maison.</p>
           <div class="flex justify-between items-center">
             <span class="font-bold text-orange-600">1200 fcfa</span>
-            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button>
+           <a href="contact.html"> <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button></a>
           </div>
         </div>
       </div>
@@ -106,7 +107,7 @@
           <p class="text-gray-600 mb-3">Steak de lentilles, salade, tomates et sauce vegan.</p>
           <div class="flex justify-between items-center">
             <span class="font-bold text-orange-600">2500 fcfa</span>
-            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button>
+          <a href="contact.html"> <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">Commander</button></a>
           </div>
         </div>
       </div>
@@ -116,14 +117,6 @@
     </div>
   </section>
 
-  <script>
-    const mobileBtn = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
+      <script src="menubtn.js"></script>
 </body>
 </html>

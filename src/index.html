@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
   <link rel="stylesheet" href="input.css">
+  <title>Accueil</title>
 </head>
 <body class="bg-gray-100">
     
+
   <!-- Navbar -->
   <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto px-4 px-6 lg:px-8">
@@ -19,10 +21,10 @@
 
         <!-- Menu Desktop -->
         <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
-          <a href="#" class="hover:text-red-500 text-red-600">Accueil</a>
+          <a href="index.html" class="hover:text-red-500 text-red-600">Accueil</a>
           <a href="apropos.html" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
           <a href="menu.html" class="text-gray-800 hover:text-red-500 font-semibold">Menu</a>
-          <a a href="contact" id="contact-link" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
+          <a a href="contact.html" id="contact-link" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
           </div>
         <div class="hidden md:flex md:items-center space-x-4">
             <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
@@ -45,10 +47,10 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Accueil</a>
+        <a href="index.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Accueil</a>
         <a href="apropos.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">À propos</a>
         <a href="menu.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
-        <aa href="contact.html" id="contact-link" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
+        <aa href="contact.html" id="openContact" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
         <span class="block text-gray-800 font-semibold px-3 py-2"> +237 699 17 84 52</span>
         <button class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
       </div>
@@ -66,7 +68,7 @@
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center py-20 gap-10 relative z-10">
     <!-- Partie gauche les texte -->
-    <div class="md:w-1/2 space-y-3 md:space-y-5  mt-15">
+    <div class="md:w-1/2 space-y-3 md:space-y-3  mt-15">
       <p class="text-xl md:text-2xl font-medium text-black tracking-wide">Best in Town</p>
       <h1 class="text-5xl md:text-6xl font-extrabold text-black leading-tight uppercase font-bold">Enjoy Our</h1>
       <h2 class="text-5xl md:text-6xl font-extrabold text-red-600 leading-tight uppercase font-bold">Chicken Burger</h2>
@@ -88,14 +90,7 @@
 
 
 
-  <script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+    <script src="menubtn.js"></script>
 
   
 </body>

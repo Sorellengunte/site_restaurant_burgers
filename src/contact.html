@@ -3,95 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-orange-50 min-h-screen flex items-center justify-center">
-
-  <!-- ======= BOUTON POUR OUVRIR LE FORMULAIRE ======= -->
-  <button id="open-contact"
-          class="bg-orange-600 text-white px-6 py-3 rounded-xl uppercase font-bold hover:bg-orange-700 transition">
-    Ouvrir le formulaire
-  </button>
+  <link rel="stylesheet" href="output.css">
+  <title>Contact </title>
 
 
-  <!-- ======= POPUP DU FORMULAIRE ======= -->
-  <div id="contact-popup"
-       class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+<body class="bg-gray-100">
 
-    <div class="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl w-full max-w-lg p-8 relative">
+  <!-- NAVBAR -->
+ 
+ <!-- Navbar -->
+  <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="w-20" src="img/9432232-removebg-preview.png" alt="Logo">
+        </div>
 
-      <!-- Bouton de fermeture -->
-      <button id="close-contact"
-              class="absolute top-4 right-4 text-gray-600 hover:text-red-600 text-2xl font-bold">
-        
-      </button>
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
+          <a href="index.html" class="hover:text-red-500 text-red-600">Accueil</a>
+          <a href="apropos.html" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
+          <a href="menu.html" class="text-gray-800 hover:text-red-500 font-semibold">Menu</a>
+          <a a href="contact.html" id="contact-link" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
+          </div>
+        <div class="hidden md:flex md:items-center space-x-4">
+            <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
+            <span class="text-gray-800 font-semibold"> +237 699 71 84 52</span>
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+        </div>
 
-      <h2 class="text-3xl font-bold text-orange-600 mb-6 uppercase">
+        <!-- Mobile menu button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Accueil</a>
+        <a href="apropos.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">À propos</a>
+        <a href="menu.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
+        <aa href="contact.html" id="openContact" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
+        <span class="block text-gray-800 font-semibold px-3 py-2"> +237 699 17 84 52</span>
+        <button class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="flex items-center justify-center min-h-screen px-4 pt-32">
+
+    <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-md">
+
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">
         Passer une Commande
       </h2>
 
-      <form class="space-y-4">
+      <!-- FORMULAIRE -->
+      <form class="space-y-5" id="form">
 
         <div>
-          <label class="block font-semibold text-gray-700">Nom complet</label>
-          <input type="text"
-                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
-                 placeholder="Votre nom complet">
+          <label class="block font-medium text-gray-700 mb-1">Votre nom</label>
+          <input type="text" id="nom" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Ex : jean paul">
         </div>
 
         <div>
-          <label class="block font-semibold text-gray-700">Numéro de téléphone</label>
-          <input type="text"
-                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
-                 placeholder="+237 ...">
+          <label class="block font-medium text-gray-700 mb-1">Votre numero de telephone</label>
+          <input type="tel" id="numero" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Ex : 650 00 00 00">
         </div>
 
         <div>
-          <label class="block font-semibold text-gray-700">Adresse de livraison</label>
-          <input type="text"
-                 class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
-                 placeholder="Quartier, rue, description...">
+          <label class="block font-medium text-gray-700 mb-1">Adresse de Livraison </label>
+          <input type="text" id="adresse" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Quartier">
         </div>
 
         <div>
-          <label class="block font-semibold text-gray-700">Votre commande</label>
-          <textarea rows="3"
-                    class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="Ex: 2 burgers + 1 Coca ..."></textarea>
+          <label class="block font-medium text-gray-700 mb-1">Burgger</label>
+          <select required id="select" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+            <option value=""> Choisir un burger </option>
+            <option>Classic Burger</option>
+            <option>Cheese Burger</option>
+            <option>Chicken Burger</option>
+            <option>Vegan Burger</option>
+          </select>
         </div>
 
-        <button class="bg-orange-600 text-white w-full py-3 rounded-xl uppercase font-bold hover:bg-orange-700 transition">
-          Envoyer la commande
-        </button>
+        <div>
+          <label class="block font-medium text-gray-700 mb-1">Quantité </label>
+          <input type="number" id="qte" min="1" value="1" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+        </div>
+
+       <button type="submit" id="btnenvoi" class="w-full bg-red-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all">Confirmer la Commande
+        </button> 
+
       </form>
-
     </div>
 
   </div>
-
-
-  <!-- ======= SCRIPT POPUP ======= -->
-  <script>
-    const openBtn = document.getElementById("open-contact");
-    const closeBtn = document.getElementById("close-contact");
-    const popup = document.getElementById("contact-popup");
-
-    // Ouvrir le formulaire
-    openBtn.addEventListener("click", () => {
-      popup.classList.remove("hidden");
-    });
-
-    // Fermer le formulaire
-    closeBtn.addEventListener("click", () => {
-      popup.classList.add("hidden");
-    });
-
-    // Fermer en cliquant en dehors du formulaire
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) popup.classList.add("hidden");
-    });
-  </script>
-
+    <script src="menubtn.js"></script>
+    <script src="validation.js"></script>
 </body>
 </html>
