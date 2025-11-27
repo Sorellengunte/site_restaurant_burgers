@@ -11,7 +11,7 @@
 
   <!-- NAVBAR -->
  
- <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto px-4 px-6 lg:px-8">
       <div class="flex justify-between h-16">
@@ -22,15 +22,15 @@
 
         <!-- Menu Desktop -->
         <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
-          <a href="index.html" class="hover:text-red-500 text-red-600">Accueil</a>
-          <a href="apropos.html" class="text-gray-800 hover:text-red-500 font-semibold">À propos</a>
-          <a href="menu.html" class="text-gray-800 hover:text-red-500 font-semibold">Menu</a>
-          <a a href="contact.html" id="contact-link" class="text-gray-800 hover:text-red-500 font-semibold">Contact</a>
+          <a href="index.html" class="links-desktop">Accueil</a>
+          <a href="apropos.html" class="links-desktop">À propos</a>
+          <a href="menu.html" class="links-desktop">Menu</a>
+          <a a href="contact.html" id="contact-link" class="links-desktop">Contact</a>
           </div>
         <div class="hidden md:flex md:items-center space-x-4">
             <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
             <span class="text-gray-800 font-semibold"> +237 699 71 84 52</span>
-            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+            <button class="btn-secondary">Track Order</button>
         </div>
 
         <!-- Mobile menu button -->
@@ -48,16 +48,15 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="index.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Accueil</a>
-        <a href="apropos.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">À propos</a>
-        <a href="menu.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
-        <aa href="contact.html" id="openContact" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
-        <span class="block text-gray-800 font-semibold px-3 py-2"> +237 699 17 84 52</span>
-        <button class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+        <a href="index.html" class="links-mobile">Accueil</a>
+        <a href="apropos.html" class="links-mobile">À propos</a>
+        <a href="menu.html" class="links-mobile">Menu</a>
+        <aa href="contact.html" id="openContact" class="links-mobile">Contact</a>
+        <span class="links-mobile"> +237 699 17 84 52</span>
+        <button class="btn-primary ">Track Order</button>
       </div>
     </div>
   </nav>
-
 
 
   <!-- CONTENU PRINCIPAL -->
@@ -74,36 +73,42 @@
 
         <div>
           <label class="block font-medium text-gray-700 mb-1">Votre nom</label>
-          <input type="text" id="nom" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Ex : jean paul">
+          <input type="text" id="nom" class="input" placeholder="Ex : jean paul">
+          <span id="erreurnom"></span>
         </div>
 
         <div>
           <label class="block font-medium text-gray-700 mb-1">Votre numero de telephone</label>
-          <input type="tel" id="numero" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Ex : 650 00 00 00">
+          <input type="tel" id="numero" class="input" placeholder="Ex : 650 00 00 00">
+           <br> 
+          <span id="erreurTelephone"></span>
         </div>
 
         <div>
           <label class="block font-medium text-gray-700 mb-1">Adresse de Livraison </label>
-          <input type="text" id="adresse" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Quartier">
+          <input type="text" id="adresse"  class="input" placeholder="Quartier">
+          <span id="erreurAdresse"></span>
         </div>
 
         <div>
           <label class="block font-medium text-gray-700 mb-1">Burgger</label>
-          <select required id="select" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          <select  id="select" class="input">
             <option value=""> Choisir un burger </option>
             <option>Classic Burger</option>
             <option>Cheese Burger</option>
             <option>Chicken Burger</option>
             <option>Vegan Burger</option>
           </select>
+          <span id="erreurBurger"></span>
         </div>
 
         <div>
           <label class="block font-medium text-gray-700 mb-1">Quantité </label>
-          <input type="number" id="qte" min="1" value="1" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+          <input type="number" id="qte" min="1" value="1" required class="input"> 
+          <span id="erreurQte"></span>
         </div>
 
-       <button type="submit" id="btnenvoi" class="w-full bg-red-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all">Confirmer la Commande
+       <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all">Confirmer la Commande
         </button> 
 
       </form>

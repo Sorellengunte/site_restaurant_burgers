@@ -8,44 +8,51 @@
 </head>
 <body class="bg-gray-100">
 
+  
   <!-- Navbar -->
   <nav class="bg-gray-100 backdrop-blur-md shadow-md fixed w-full z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-      <div class="flex items-center space-x-4">
-        <img src="img/9432232-removebg-preview.png" alt="Logo" class="w-20">
-      
-      </div>
-
-      <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
-        <a href="index.html" class="text-gray-800 hover:text-red-500 font-semibold">Accueil</a>
-        <a href="apropos.html" class="text-gray-800 hover:text-red-500 text-red-600">À propos</a>
-        <a href="menu.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Menu</a>
-        <a href="contact.html" class="block text-gray-800 font-semibold hover:bg-gray-200 rounded px-3 py-2">Contact</a>
-      </div>
-<div class="hidden md:flex md:items-center space-x-4">
-            <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
-            <span class="text-gray-800 font-semibold"> +237 699 71 84 52</span>
-            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Track Order</button>
+    <div class="max-w-7xl mx-auto px-4 px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="w-20" src="img/9432232-removebg-preview.png" alt="Logo">
         </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-800">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex md:items-center md:ml-10 space-x-7">
+          <a href="index.html" class="links-desktop">Accueil</a>
+          <a href="apropos.html" class="links-desktop">À propos</a>
+          <a href="menu.html" class="links-desktop">Menu</a>
+          <a a href="contact.html" id="contact-link" class="links-desktop">Contact</a>
+          </div>
+        <div class="hidden md:flex md:items-center space-x-4">
+            <img class="h-10 w-auto" src="img/food-restaurant_1731980-removebg-preview.png" alt=""> 
+            <span class="text-gray-800 font-semibold"> +237 699 71 84 52</span>
+            <button class="btn-secondary">Track Order</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-md">
-      <a href="index.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Accueil</a>
-      <a href="apropos.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">À propos</a>
-      <a href="menu.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Menu</a>
-      <a href="contact.html" class="block px-4 py-2 font-semibold hover:bg-gray-200">Contact</a>
-      <span class="block px-4 py-2 font-semibold">+237 699 71 84 52</span>
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html" class="links-mobile">Accueil</a>
+        <a href="apropos.html" class="links-mobile">À propos</a>
+        <a href="menu.html" class="links-mobile">Menu</a>
+        <aa href="contact.html" id="openContact" class="links-mobile">Contact</a>
+        <span class="links-mobile"> +237 699 17 84 52</span>
+        <button class="btn-primary ">Track Order</button>
+      </div>
     </div>
   </nav>
 
@@ -80,11 +87,11 @@ et un goût inoubliable qui vous donne envie de revenir.
 <p class="text-gray-600">Ingrédients sélectionnés pour un goût exceptionnel.</p>
 </div>
 <div class="p-6 bg-gray-50 rounded-xl shadow text-center">
-<h3 class="text-xl font-bold mb-2">Rapidité</h3>
+<h3 class="h3">Rapidité</h3>
 <p class="text-gray-600">Un service rapide sans compromettre la qualité.</p>
 </div>
 <div class="p-6 bg-gray-50 rounded-xl shadow text-center">
-<h3 class="text-xl font-bold mb-2">Passion</h3>
+<h3 class="h3">Passion</h3>
 <p class="text-gray-600">Chaque burger est préparé avec amour et expertise.</p>
 </div>
 </div>

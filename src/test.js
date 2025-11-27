@@ -25,7 +25,7 @@ form.addEventListener("submit", function (e) {
   erreurAdresse.textContent = "";
   erreurBurger.textContent = "";
   erreurQte.textContent = "";
-             
+
   // Supprime l'ancien message de confirmation s'il existe
   const ancienMessage = document.getElementById("messageConfirmation");
   if (ancienMessage) {
