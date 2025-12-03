@@ -36,7 +36,6 @@ function validerNom() {
   }
   return true;
 }
-
 // NUMÉRO
 function validerNumero() {
   erreurTelephone.textContent = "";
@@ -59,7 +58,6 @@ function validerNumero() {
   }
   return true;
 }
-
 // ADRESSE
 function validerAdresse() {
   erreurAdresse.textContent = "";
@@ -89,7 +87,6 @@ function validerBurger() {
   }
   return true;
 }
-
 // QUANTITÉ
 function validerQte() {
   erreurQte.textContent = "";
@@ -101,15 +98,13 @@ function validerQte() {
   }
   return true;
 }
-
 // fonction qui appelle le bouton onclick
 function validerFormulaire(e) {
   e.preventDefault();
   const ancienMessage = document.getElementById("messageConfirmation"); // Supprime l'ancien message
   if (ancienMessage) ancienMessage.remove();
   const estValide = validerNom() &&validerNumero() && validerAdresse() && validerBurger() && validerQte(); // Appel des fonctions de validation
-
-  // Si tout est valide on afiiche le msg vert
+ // Si tout est valide on afiiche le msg vert
   if (estValide) {
     const message = document.createElement("div");
     message.id = "messageConfirmation";
