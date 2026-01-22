@@ -3,9 +3,9 @@
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.18"
   },
   "engines": {
-    "node": "20"
+    "node": "20.x"
   }
 }
